@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Incentive Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Incentive Calculator</h1>
+  <div id="logo">
+  <div class="brand-name">JOHNSON & JOHNSON</div>
+  <div class="tagline">Innovative Medicine</div>
+  </div>
+
+  <form id="incentive-form">
+    <label for="total_value">Enter Total Value:</label>
+    <input
+      type="number"
+      step="any"
+      min="0"
+      id="total_value"
+      name="total_value"
+      required
+    />
+    <button type="submit">Calculate Incentive</button>
+  </form>
+
+  <div id="error" class="error"></div>
+  <div id="result" class="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

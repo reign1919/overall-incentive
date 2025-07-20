@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+/* Background & text */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #b30000 0%, #800000 100%);
+  color: white;
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: 0 0 60px #a50000cc inset;
+  border-radius: 12px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px #ff0000cc, 0 0 8px #ff4d4dbb;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Label */
+label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+  display: block;
+  text-shadow: 0 0 8px #ff6666cc;
+}
+
+/* Input with neumorphism */
+input[type="number"] {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #b30000;
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  box-shadow:
+    6px 6px 12px #9e0000,
+    -6px -6px 12px #ff6666;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  box-shadow:
+    0 0 15px #ff0000,
+    inset 0 0 8px #ff4d4d;
+  transform: scale(1.03);
+}
+
+/* Button with glow */
+button {
+  width: 100%;
+  padding: 16px 0;
+  margin-top: 25px;
+  background: linear-gradient(45deg, #ff0000, #b30000);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: white;
+  cursor: pointer;
+  box-shadow:
+    0 0 25px #ff0000cc,
+    0 6px 20px #800000cc;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff4d4d, #d90000);
+  box-shadow:
+    0 0 40px #ff3333,
+    0 6px 30px #cc0000;
+  transform: scale(1.05);
+}
+
+/* Error message */
+.error {
+  color: #ff4444;
+  background: #330000bb;
+  padding: 14px 20px;
+  margin-top: 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  box-shadow: 0 0 10px #ff4444cc;
+  user-select: text;
+}
+
+/* Result box */
+.result {
+  margin-top: 25px;
+  padding: 24px 28px;
+  background: #660000dd;
+  border-radius: 18px;
+  box-shadow:
+    0 0 25px #ff6666cc,
+    inset 0 0 18px #ff1a1a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-align: center;
+  user-select: text;
+  text-shadow: 0 0 6px #ff9999cc;
+}
+
+/* Smooth fade-in for result */
+.result,
+.error {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#logo {
+  text-align: center;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.brand-name {
+  font-family: 'Georgia', serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px #fff,
+    0 0 25px #ff0000cc,
+    0 0 40px #ff0000aa;
+}
+
+.tagline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffd6d6cc;
+  margin-top: 6px;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  text-shadow: 0 0 6px #ff4d4daa;
+}
